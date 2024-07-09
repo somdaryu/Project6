@@ -38,12 +38,12 @@ class Bus{
 }
 
 class Subway {
-	int lineNumber;
+	String lineNumber;
 	int passengerCount;
 	int money;
 	
 	//지하철 노선번호를 초기화하는 생성자
-	public Subway(int lineNumber) {
+	public Subway(String lineNumber) {
 		this.lineNumber = lineNumber;
 	}
 	
@@ -78,6 +78,17 @@ class Student {
 	public void takeSubway(Subway subway) {
 		subway.take(1500);
 		this.money = this.money - 1500;
+	}
+	
+	
+	//택시에 타서 요금을 지불하는 메소드
+	public void takeTaxi(Taxi taxi) {
+		if(money < 10000) {
+			System.out.println(money+"원이 있어 택시를 탈 수 없습니다.");
+			return;
+		}
+		taxi.take(10000);
+		this.money = this.money - 10000;
 	}
 	
 	public void showInfo() {

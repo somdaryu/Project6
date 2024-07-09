@@ -9,7 +9,7 @@ public class Quiz1 {
 		Bus bus = new Bus(100);
 		stu1.takeBus(bus);
 		
-		Subway subway = new Subway(2);
+		Subway subway = new Subway("2호선");
 		stu2.takeSubway(subway);
 		
 		stu1.showInfo();
